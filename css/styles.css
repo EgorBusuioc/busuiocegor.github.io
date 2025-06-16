@@ -1,0 +1,521 @@
+@font-face {
+    font-family: 'Noyth Bold Italic';
+    src: url('../fonts/NoyhGeometricSlimBoldItalic.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noyth Bold';
+    src: url('../fonts/Typesketchbook\ \ NoyhGeometricHeavy.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #5CDB95;
+    font-family: "Noyth Bold Italic", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+.hidden,
+.hidden-left,
+.hidden-right,
+.hidden-up {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 0.8s linear;
+}
+
+.hidden-left {
+    transform: translateX(-20%);
+}
+
+.hidden-right {
+    transform: translateX(20%);
+}
+
+.hidden-up {
+    transform: translateY(-20%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.header-container {
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: #5CDB95;
+    z-index: 100;
+    padding: 0 50px;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.header-container.scrolled {
+    background-color: #05386B;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 2.5vh;
+    color: #05386B;
+    transition: color 0.5s ease;
+}
+
+.logo-container.scrolled {
+    color: #EDF5E1;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-container li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #05386B;
+    margin: 0px 10px;
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.nav-container li.scrolled {
+    color: #EDF5E1;
+}
+
+.nav-container li:first-child {
+    margin-left: 10px;
+}
+
+.nav-container li:hover {
+    color: #EDF5E1;
+    transform: rotate(10deg);
+}
+
+.nav-container li.scrolled:hover {
+    color: #5CDB95;
+    transform: rotate(10deg);
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.intro-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    margin-top: 10vh;
+    box-sizing: border-box;
+}
+
+.intro-left {
+    flex: 1;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    /* Располагаем текст вертикально */
+    justify-content: center;
+    /* Центрируем текст по вертикали */
+    height: 100%;
+    /* Высота текста равна высоте родителя */
+    padding-top: 3vh;
+}
+
+.hello-label,
+.job-label {
+    margin: 5px 0;
+    /* Отступы между текстом */
+    text-align: center;
+    /* Выравниваем текст слева */
+    font-family: "Noyth Bold";
+    color: #EDF5E1;
+    font-size: 13vh;
+}
+
+.name-label {
+    margin: 5px 0;
+    text-align: center;
+    font-family: "Noyth Bold Italic";
+    color: #05386B;
+    font-size: 13vh;
+}
+
+.stack-title {
+    margin-top: 3vh;
+    color: #05386B;
+    font-size: 10vh;
+    font-family: "Noyth Bold";
+    text-align: center;
+    height: 3vh;
+}
+
+.technologies-stack-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+    height: 70vh;
+    margin-top: 10vh;
+    box-sizing: border-box;
+}
+
+.techo-stack-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70vh;
+}
+
+.stack-elem {
+    color: #EDF5E1;
+    font-family: "Noyth Bold";
+    font-size: 4.5vh;
+    background-color: transparent;
+    padding: 10px 10px;
+    border-radius: 15px;
+    transition: font-size 0.3s ease, background-color 0.3s ease;
+
+}
+
+.stack-elem:hover {
+    color: #EDF5E1;
+    font-family: "Noyth Bold";
+    font-size: 5.5vh;
+    background-color: #05386B;
+}
+
+.project {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    gap: 5vh;
+    font-family: 'Noyth Bold';
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 4vh;
+    color: #EDF5E1;
+}
+
+.project-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15vh;
+}
+
+.title-text {
+    font-family: 'Noyth Bold';
+    color: #05386B;
+}
+
+.project-name {
+    font-family: 'Noyth Bold Italic';
+    color: #05386B;
+}
+
+.technologies-user {
+    display: flex;
+    justify-content: space-around;
+    height: 15vh;
+    flex-direction: column;
+}
+
+.project-description {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 5vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 5vh;
+}
+
+.education-sub {
+    height: 5px;
+    width: 100%;
+    background-color: #05386B;
+    border: 1px solid #05386B;
+}
+
+.education-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 3vh;
+}
+
+.education-title-container {
+    width: 100%;
+}
+
+.education-title-main {
+    font-family: 'Noyth Bold Italic';
+    color: #05386B;
+    font-size: 10vh;
+    margin: 0;
+}
+
+.education-title {
+    font-family: 'Noyth Bold Italic';
+    color: #05386B;
+    font-size: 5vh;
+    margin: 0;
+}
+
+.education-role {
+    font-family: 'Noyth Bold';
+    color: #EDF5E1;
+    font-size: 4vh;
+    margin: 0;
+}
+
+.education-location {
+    font-family: 'Noyth Bold';
+    color: #EDF5E1;
+    font-size: 3vh;
+    margin: 0;
+}
+
+.education-spec {
+    color: #EDF5E1;
+    font-size: 2.5vh;
+}
+
+.education-duration {
+    margin: 0;
+}
+
+.education-gpa {
+    margin: 0;
+    text-decoration: underline #05386B;
+}
+
+.styled-link {
+    color: #05386B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.styled-link:hover {
+    color: #379683;
+    text-decoration: underline;
+}
+
+.achievements-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 5vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 5vh;
+}
+
+.achievements-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.achievement-card {
+    flex: 1 1 calc(50% - 20px);
+    min-height: 200px;
+    border: 3.5px solid #05386B;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.achievement-container {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 400px;
+}
+
+.achievement-title {
+    font-family: 'Noyth Bold Italic';
+    color: #05386B;
+    font-size: 5vh;
+    margin: 0;
+}
+
+.achievement-date {
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #EDF5E1;
+    font-size: 3vh;
+}
+
+.achievement-author {
+    margin: 0;
+    color: #EDF5E1;
+    font-size: 3vh;
+    margin-bottom: 10px;
+}
+
+.border-card {
+    border-top: 3.5px solid #05386B;
+    /* Граница сверху */
+    border-left: 3.5px solid #05386B;
+    /* Граница слева */
+    border-right: 3.5px solid #05386B;
+    /* Граница справа */
+    border-bottom: 3.5px solid #05386B;
+    /* Убираем границу снизу */
+    border-radius: 10px 10px 0 0;
+    padding-left: 20px;
+}
+
+.border-inner {
+    border-top: 0.1px solid #05386B;
+    /* Граница сверху */
+    border-left: 3.5px solid #05386B;
+    /* Граница слева */
+    border-right: 3.5px solid #05386B;
+    /* Граница справа */
+    border-bottom: 3.5px solid #05386B;
+    /* Убираем границу снизу */
+    border-radius: 0 0 10px 10px;
+    min-height: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    color: #EDF5E1;
+    font-size: 3vh;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.skills-list {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-title {
+    font-family: 'Noyth Bold Italic';
+    color: #05386B;
+}
+
+
+.footer {
+    background-color: #05386B;
+    height: 470px;
+}
+
+.footer-helper {
+    height: 100px;
+    background-color: #5CDB95;
+    border-radius: 0 0 25px 25px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.footer-container {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    text-align: center;
+    color: #EDF5E1;
+    font-family: 'Noyth Bold Italic';
+    font-size: 10vh;
+}
+
+.title-elem {
+    font-size: 5vh;
+    text-align: left;
+    font-family: 'Noyth Bold';
+}
+
+.ref-link {
+    margin: 0;
+}
+
+.ref-link a{
+    font-size: 3vh;
+    text-decoration: none;
+    color: #EDF5E1;
+}
+
+
+@media (max-width: 768px) {
+    .intro-section-container {
+        flex-direction: column;
+        /* Переключаем на вертикальную ориентацию */
+        height: auto;
+        /* Автоматическая высота */
+        margin-top: 5vh;
+        /* Уменьшаем отступ сверху */
+    }
+
+    .intro-left {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .text-container {
+        padding-top: 2vh;
+        /* Уменьшаем отступ сверху */
+    }
+
+    .hello-label,
+    .name-label,
+    .job-label {
+        font-size: 8vh;
+        /* Уменьшаем размер шрифта */
+        text-align: center;
+        /* Центрируем текст */
+    }
+
+    #lottie-animation {
+        width: 100px;
+        /* Уменьшаем ширину анимации */
+        height: 100px;
+        /* Уменьшаем высоту анимации */
+        margin-top: 2vh;
+        /* Добавляем отступ сверху */
+    }
+}
