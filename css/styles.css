@@ -47,6 +47,16 @@ body {
     transform: translateX(0);
 }
 
+
+.nav-container.open-nav {
+    display: flex;
+
+}
+
+.nav-container.hidden-nav {
+    display: none;
+}
+
 .header-container {
     margin-top: 0;
     position: fixed;
@@ -179,6 +189,11 @@ body {
     padding: 0 50px;
 }
 
+.img {
+    width: 370px;
+    height: 370px;
+}
+
 .stack-title {
     margin-top: 3vh;
     color: #05386B;
@@ -190,7 +205,7 @@ body {
 
 .technologies-stack-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
@@ -204,28 +219,26 @@ body {
 
 .techo-stack-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 70vh;
+    height: 100%;
 }
 
 .stack-elem {
     color: #EDF5E1;
     font-family: "Noyth Bold";
-    font-size: 30px;
+    font-size: 35px;
     background-color: transparent;
     padding: 10px 10px;
     border-radius: 15px;
     transition: font-size 0.3s ease, background-color 0.3s ease;
-
 }
 
 .stack-elem:hover {
     color: #EDF5E1;
     font-family: "Noyth Bold";
-    font-size: 37px;
     background-color: #05386B;
 }
 
@@ -249,7 +262,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 15vh;
+    min-height: 15vh;
 }
 
 .title-text {
@@ -265,7 +278,7 @@ body {
 .technologies-user {
     display: flex;
     justify-content: space-around;
-    height: 15vh;
+    min-height: 15vh;
     flex-direction: column;
 }
 
@@ -528,10 +541,12 @@ body {
     }
 
     .technologies-stack-container {
+        min-height: 70vh;
         flex-direction: column;
     }
 
     .techo-stack-container {
+        min-height: 70vh;
         flex-direction: row;
     }
 
@@ -619,10 +634,12 @@ body {
     }
 
     .technologies-stack-container {
+        min-height: 70vh;
         flex-direction: column;
     }
 
     .techo-stack-container {
+        min-height: 70vh;
         flex-direction: row;
     }
 
@@ -675,4 +692,127 @@ body {
     }
 }
 
-@media (max-width: 600px) {}
+@media (max-width: 600px) {
+    .home::before {
+        content: 'BE';
+        font-size: 50px;
+    }
+
+    .intro-left {
+        padding: 0 20px;
+    }
+
+    .hello-label {
+        font-size: 50px;
+    }
+
+    .nav-container.open-nav {
+        display: none;
+    }
+
+    .nav-container.hidden-nav {
+        display: flex;
+    }
+
+    .name-label {
+        font-size: 55px;
+    }
+
+    .img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .job-label {
+        font-size: 50px;
+    }
+
+    .nav-container li {
+        font-size: 40px;
+    }
+
+    .nav-container {
+        gap: 10px;
+    }
+
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .stack-container {
+        min-height: 70vh;
+        padding: 0 20px;
+    }
+
+    .technologies-stack-container {
+        padding: 0 20px;
+        min-height: 70vh;
+        flex-direction: column;
+    }
+
+    .techo-stack-container {
+        min-height: 70vh;
+        flex-direction: row;
+    }
+
+    .stack-elem {
+        font-size: 25px;
+    }
+
+    .achievements-container {
+        padding: 0 20px;
+    }
+
+    .achievements-grid {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        min-width: 60%;
+        gap: 20px;
+    }
+
+    .achievement-title {
+        font-size: 35px;
+    }
+
+    .stack-title {
+        font-size: 50px;
+    }
+
+    .project {
+        padding: 0 20px;
+        font-size: 25px;
+    }
+
+    .project-description {
+        gap: 2vh;
+    }
+
+    .education-title-main {
+        font-size: 50px;
+    }
+
+    .education-container {
+        padding: 0 20px;
+    }
+
+    .education-title {
+        font-size: 35px;
+    }
+
+    .education-role {
+        font-size: 30px;
+    }
+
+    .footer-container {
+        padding: 0 20px;
+        font-size: 50px;
+    }
+
+    .title-elem {
+        font-size: 30px;
+    }
+
+    .ref-link a {
+        font-size: 20px;
+    }
+}
