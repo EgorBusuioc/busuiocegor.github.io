@@ -208,7 +208,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    height: 70vh;
+    min-height: 70vh;
 }
 
 .stack-elem {
@@ -457,7 +457,7 @@ body {
 
 .footer {
     background-color: #05386B;
-    min-height: 470px;
+    min-height: 570px;
 }
 
 .footer-helper {
@@ -468,6 +468,10 @@ body {
 }
 
 .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 470px;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 30px;
@@ -495,7 +499,6 @@ body {
 
 
 @media (max-width: 1400px) {
-
     .hello-label {
         font-size: 70px;
     }
@@ -528,7 +531,7 @@ body {
         flex-direction: column;
     }
 
-    .techo-stack-container{
+    .techo-stack-container {
         flex-direction: row;
     }
 
@@ -581,6 +584,95 @@ body {
     }
 }
 
-@media (max-width: 990px) {}
+@media (max-width: 800px) {
+    .home::before {
+        content: 'BE';
+        font-size: 60px;
+    }
 
-@media (max-width: 770px) {}
+    .hello-label {
+        font-size: 60px;
+    }
+
+    .name-label {
+        font-size: 65px;
+    }
+
+    .job-label {
+        font-size: 60px;
+    }
+
+    .nav-container li {
+        font-size: 45px;
+    }
+
+    .nav-container {
+        gap: 17px;
+    }
+
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .stack-container {
+        padding: 0 20px;
+    }
+
+    .technologies-stack-container {
+        flex-direction: column;
+    }
+
+    .techo-stack-container {
+        flex-direction: row;
+    }
+
+    .stack-elem {
+        font-size: 40px;
+    }
+
+    .achievements-container {
+        padding: 0 20px;
+    }
+
+    .achievements-grid {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        min-width: 60%;
+        gap: 20px;
+    }
+
+    .stack-title {
+        font-size: 70px;
+    }
+
+    .project {
+        padding: 0 20px;
+    }
+
+    .project-description {
+        gap: 2vh;
+    }
+
+    .education-title-main {
+        font-size: 70px;
+    }
+
+    .education-container {
+        padding: 0 20px;
+    }
+
+    .education-title {
+        font-size: 43px;
+    }
+
+    .footer-container {
+        padding: 0 20px;
+        font-size: 75px;
+    }
+
+    .title-elem {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px) {}
