@@ -1,19 +1,19 @@
 @font-face {
-    font-family: 'Noyth Bold Italic';
-    src: url('../fonts/NoyhGeometricSlimBoldItalic.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Noyth Bold Italic';
+  src: url('../fonts/NoyhGeometricSlimBoldItalic.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 button {
-  width: 250px;
+  width: 350px;
   height: 50px;
   background-color: #05386B;
   cursor: pointer;
   color: #EDF5E1;
   border-radius: 5px;
   font-family: 'Noyth Bold Italic';
-  font-size: 4vh;
+  font-size: 35px;
   border: 3px solid #05386B;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -21,4 +21,19 @@ button {
 button:hover {
   color: #05386B;
   background-color: #EDF5E1;
+}
+
+@media (max-width: 1400px) {
+  button {
+    width: 100%;
+    height: 70px;
+    font-size: 40px;
+  }
+}
+
+@media (hover: none) {
+  button:active {
+    color: #05386B;
+    background-color: #EDF5E1;
+  }
 }

@@ -63,6 +63,10 @@ body {
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
+.home::before {
+    content: 'Busuioc Egor';
+}
+
 .header-container.scrolled {
     background-color: #05386B;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -71,7 +75,7 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    font-size: 2.5vh;
+    font-size: 20px;
     color: #05386B;
     transition: color 0.5s ease;
 }
@@ -126,12 +130,18 @@ body {
 .intro-section-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 90vh;
     margin-top: 10vh;
     box-sizing: border-box;
+}
+
+
+#lottie-animation {
+    align-self: center;
+    text-align: center;
 }
 
 .intro-left {
@@ -143,23 +153,18 @@ body {
 .text-container {
     display: flex;
     flex-direction: column;
-    /* Располагаем текст вертикально */
     justify-content: center;
-    /* Центрируем текст по вертикали */
     height: 100%;
-    /* Высота текста равна высоте родителя */
     padding-top: 3vh;
 }
 
 .hello-label,
 .job-label {
     margin: 5px 0;
-    /* Отступы между текстом */
     text-align: center;
-    /* Выравниваем текст слева */
     font-family: "Noyth Bold";
     color: #EDF5E1;
-    font-size: 13vh;
+    font-size: 90px;
 }
 
 .name-label {
@@ -167,13 +172,17 @@ body {
     text-align: center;
     font-family: "Noyth Bold Italic";
     color: #05386B;
-    font-size: 13vh;
+    font-size: 90px;
+}
+
+.stack-container {
+    padding: 0 50px;
 }
 
 .stack-title {
     margin-top: 3vh;
     color: #05386B;
-    font-size: 10vh;
+    font-size: 90px;
     font-family: "Noyth Bold";
     text-align: center;
     height: 3vh;
@@ -183,11 +192,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     padding-left: 50px;
     padding-right: 50px;
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     margin-top: 10vh;
     box-sizing: border-box;
 }
@@ -204,7 +214,7 @@ body {
 .stack-elem {
     color: #EDF5E1;
     font-family: "Noyth Bold";
-    font-size: 4.5vh;
+    font-size: 30px;
     background-color: transparent;
     padding: 10px 10px;
     border-radius: 15px;
@@ -215,19 +225,23 @@ body {
 .stack-elem:hover {
     color: #EDF5E1;
     font-family: "Noyth Bold";
-    font-size: 5.5vh;
+    font-size: 37px;
     background-color: #05386B;
+}
+
+.project-container {
+    min-height: 50vh;
 }
 
 .project {
     display: flex;
-    height: auto;
+    min-height: 90vh;
     flex-direction: column;
     gap: 5vh;
     font-family: 'Noyth Bold';
     padding-left: 50px;
     padding-right: 50px;
-    font-size: 4vh;
+    font-size: 35px;
     color: #EDF5E1;
 }
 
@@ -257,7 +271,7 @@ body {
 
 .project-description {
     display: flex;
-    height: 80vh;
+    min-height: 80vh;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -293,28 +307,28 @@ body {
 .education-title-main {
     font-family: 'Noyth Bold Italic';
     color: #05386B;
-    font-size: 10vh;
+    font-size: 90px;
     margin: 0;
 }
 
 .education-title {
     font-family: 'Noyth Bold Italic';
     color: #05386B;
-    font-size: 5vh;
+    font-size: 45px;
     margin: 0;
 }
 
 .education-role {
     font-family: 'Noyth Bold';
     color: #EDF5E1;
-    font-size: 4vh;
+    font-size: 35px;
     margin: 0;
 }
 
 .education-location {
     font-family: 'Noyth Bold';
     color: #EDF5E1;
-    font-size: 3vh;
+    font-size: 27px;
     margin: 0;
 }
 
@@ -324,10 +338,12 @@ body {
 }
 
 .education-duration {
+    font-size: 22px;
     margin: 0;
 }
 
 .education-gpa {
+    font-size: 22px;
     margin: 0;
     text-decoration: underline #05386B;
 }
@@ -379,7 +395,7 @@ body {
 .achievement-title {
     font-family: 'Noyth Bold Italic';
     color: #05386B;
-    font-size: 5vh;
+    font-size: 45px;
     margin: 0;
 }
 
@@ -387,7 +403,7 @@ body {
     margin-top: 10px;
     margin-bottom: 0;
     color: #EDF5E1;
-    font-size: 3vh;
+    font-size: 27px;
 }
 
 .achievement-author {
@@ -399,26 +415,18 @@ body {
 
 .border-card {
     border-top: 3.5px solid #05386B;
-    /* Граница сверху */
     border-left: 3.5px solid #05386B;
-    /* Граница слева */
     border-right: 3.5px solid #05386B;
-    /* Граница справа */
     border-bottom: 3.5px solid #05386B;
-    /* Убираем границу снизу */
     border-radius: 10px 10px 0 0;
     padding-left: 20px;
 }
 
 .border-inner {
     border-top: 0.1px solid #05386B;
-    /* Граница сверху */
     border-left: 3.5px solid #05386B;
-    /* Граница слева */
     border-right: 3.5px solid #05386B;
-    /* Граница справа */
     border-bottom: 3.5px solid #05386B;
-    /* Убираем границу снизу */
     border-radius: 0 0 10px 10px;
     min-height: 400px;
     padding-left: 20px;
@@ -439,12 +447,17 @@ body {
 .skill-title {
     font-family: 'Noyth Bold Italic';
     color: #05386B;
+    font-size: 27px;
+}
+
+.skill-description {
+    font-size: 27px;
 }
 
 
 .footer {
     background-color: #05386B;
-    height: 470px;
+    min-height: 470px;
 }
 
 .footer-helper {
@@ -461,11 +474,11 @@ body {
     text-align: center;
     color: #EDF5E1;
     font-family: 'Noyth Bold Italic';
-    font-size: 10vh;
+    font-size: 90px;
 }
 
 .title-elem {
-    font-size: 5vh;
+    font-size: 45px;
     text-align: left;
     font-family: 'Noyth Bold';
 }
@@ -474,48 +487,100 @@ body {
     margin: 0;
 }
 
-.ref-link a{
-    font-size: 3vh;
+.ref-link a {
+    font-size: 27px;
     text-decoration: none;
     color: #EDF5E1;
 }
 
 
-@media (max-width: 768px) {
-    .intro-section-container {
-        flex-direction: column;
-        /* Переключаем на вертикальную ориентацию */
-        height: auto;
-        /* Автоматическая высота */
-        margin-top: 5vh;
-        /* Уменьшаем отступ сверху */
+@media (max-width: 1400px) {
+
+    .hello-label {
+        font-size: 70px;
     }
 
-    .intro-left {
-        padding-left: 20px;
-        padding-right: 20px;
+    .home {
+        font-size: 45px;
     }
 
-    .text-container {
-        padding-top: 2vh;
-        /* Уменьшаем отступ сверху */
+    .nav-container li {
+        font-size: 40px;
     }
 
-    .hello-label,
-    .name-label,
+    .nav-container {
+        gap: 13px;
+    }
+
     .job-label {
-        font-size: 8vh;
-        /* Уменьшаем размер шрифта */
-        text-align: center;
-        /* Центрируем текст */
+        font-size: 70px;
     }
 
-    #lottie-animation {
-        width: 100px;
-        /* Уменьшаем ширину анимации */
-        height: 100px;
-        /* Уменьшаем высоту анимации */
-        margin-top: 2vh;
-        /* Добавляем отступ сверху */
+    .header-container {
+        padding: 0 30px;
+    }
+
+    .stack-container {
+        padding: 0 30px;
+    }
+
+    .technologies-stack-container {
+        flex-direction: column;
+    }
+
+    .techo-stack-container{
+        flex-direction: row;
+    }
+
+    .stack-elem {
+        font-size: 35px;
+    }
+
+    .achievements-container {
+        padding: 0 30px;
+    }
+
+    .achievements-grid {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        min-width: 60%;
+        gap: 20px;
+    }
+
+    .stack-title {
+        font-size: 70px;
+    }
+
+    .project {
+        padding: 0 30px;
+    }
+
+    .project-description {
+        gap: 2vh;
+    }
+
+    .education-title-main {
+        font-size: 70px;
+    }
+
+    .education-container {
+        padding: 0 30px;
+    }
+
+    .education-title {
+        font-size: 43 px;
+    }
+
+    .footer-container {
+        padding: 0 30px;
+        font-size: 75px;
+    }
+
+    .title-elem {
+        font-size: 40px;
     }
 }
+
+@media (max-width: 990px) {}
+
+@media (max-width: 770px) {}
