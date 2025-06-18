@@ -152,6 +152,8 @@ body {
 #lottie-animation {
     align-self: center;
     text-align: center;
+    width: 150px; 
+    height: 150px;
 }
 
 .intro-left {
@@ -725,6 +727,136 @@ body {
 
     .job-label {
         font-size: 50px;
+    }
+
+    .nav-container li {
+        font-size: 40px;
+    }
+
+    .nav-container {
+        gap: 10px;
+    }
+
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .stack-container {
+        min-height: 70vh;
+        padding: 0 20px;
+    }
+
+    .technologies-stack-container {
+        padding: 0 20px;
+        min-height: 70vh;
+        flex-direction: column;
+    }
+
+    .techo-stack-container {
+        min-height: 70vh;
+        flex-direction: row;
+    }
+
+    .stack-elem {
+        font-size: 25px;
+    }
+
+    .achievements-container {
+        padding: 0 20px;
+    }
+
+    .achievements-grid {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        min-width: 60%;
+        gap: 20px;
+    }
+
+    .achievement-title {
+        font-size: 35px;
+    }
+
+    .stack-title {
+        font-size: 50px;
+    }
+
+    .project {
+        padding: 0 20px;
+        font-size: 25px;
+    }
+
+    .project-description {
+        gap: 2vh;
+    }
+
+    .education-title-main {
+        font-size: 50px;
+    }
+
+    .education-container {
+        padding: 0 20px;
+    }
+
+    .education-title {
+        font-size: 35px;
+    }
+
+    .education-role {
+        font-size: 30px;
+    }
+
+    .footer-container {
+        padding: 0 20px;
+        font-size: 50px;
+    }
+
+    .title-elem {
+        font-size: 30px;
+    }
+
+    .ref-link a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 680px) {
+    .home::before {
+        content: 'BE';
+        font-size: 50px;
+    }
+
+    .intro-left {
+        padding: 0 20px;
+    }
+
+    .nav-container.open-nav {
+        display: none;
+    }
+
+    .nav-container.hidden-nav {
+        display: flex;
+    }
+
+    .name-label {
+        font-size: 45px;
+    }
+
+    .img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hello-label {
+        font-size: 40px;
+    }
+
+    .job-label {
+        font-size: 40px;
+    }
+
+    #lottie-animation {
+        width: 120px;
+        height: 120px;
     }
 
     .nav-container li {
