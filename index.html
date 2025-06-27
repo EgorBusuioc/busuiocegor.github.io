@@ -83,43 +83,45 @@
             <div class="project">
                 <div class="description hidden-left">
                     <div class="project-title">
-                        <div class="title-text">A modern web platform for apartment rentals, built using Java Spring
-                            Boot and a microservice
-                            architecture.</div>
-                        <div class="project-name" style="margin-bottom: 5vh;">Project Name: EasyLease</div>
+                        <div class="title-text">A multifunctional digital platform for residents of the federal state of
+                            Hessen, providing access to a wide range of public services such as civil signatures,
+                            certificate requests, and property registration. Built using Java Spring Boot and a
+                            microservice architecture.</div>
+                        <div class="project-name" style="margin-bottom: 5vh;">Project Name: HessenLand</div>
                     </div>
                     <div class="technologies-user" style="margin-bottom: 5vh;">
                         <div class="project-name">Technology Stack:</div>
-                        <div>Java, Spring Boot, Multiple PostgreSQL instances, Apache Kafka, Spring
-                            Security, JWT, Email confirmation, Eureka, API Gateway.</div>
+                        <div>Java, Spring Boot, Multiple PostgreSQL instances, Apache Kafka, Spring Security, JWT,
+                            Email confirmation, Eureka, API Gateway, AES Encryption, Docker.</div>
                     </div>
                     <div class="project-description">
                         <div class="project-name">Implemented Microservices:</div>
                         <div class="title-text">Gateway Service:</div>
-                        Routes incoming client requests to the appropriate backend services.
+                        Handles request routing and verifies JWT tokens before passing requests to backend services.
 
                         <div class="title-text">Auth Service:</div>
-                        Handles user registration, authentication, and JWT token generation.
-                        After registration, users receive an activation link via email.
-                        Tokens are only issued after successful account confirmation.
+                        Manages user registration, authentication, and token issuance.
+                        Stores only email and password; other data is sent via Kafka to the user service.
+                        Sends activation emails and processes password recovery.
 
                         <div class="title-text">Notification Service:</div>
-                        Sends email notifications, including activation links.
+                        Sends email notifications, including activation and recovery messages.
+                        Communicates via Kafka only and does not expose public HTTP endpoints.
 
-                        <div class="title-text">Apartment Service:</div>
-                        Manages apartments and works with a separate database.
-                        Communicates securely via API key with the Auth Service.
+                        <div class="title-text">User Service:</div>
+                        Handles management of citizen and registrar profiles.
+                        Stores encrypted user data and allows registrars to verify new users.
 
                         <div class="project-name">Future Enhancements:</div>
-                        Integration of a machine learning model to provide personalized apartment recommendations
+                        Integration of a machine learning model to provide personalized government service suggestions.
 
-                        Use of Redis to cache responses from the ML service
+                        Use of Redis to cache responses from the ML service.
 
-                        Communication between Java and Python components using gRPC
+                        Communication between Java and Python components using gRPC.
                     </div>
                 </div>
                 <button style="margin: auto;" id="github-button" target="_blank"
-                    href="https://github.com/EgorBusuioc/apartments_rent_app">Go To GitHub Project!</button>
+                    href="https://github.com/EgorBusuioc/hessen_land">Go To GitHub Project!</button>
             </div>
         </section>
         <section class="education-container" id="education">
